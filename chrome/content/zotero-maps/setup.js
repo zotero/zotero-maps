@@ -131,7 +131,11 @@ Zotero.Maps = {
             }
         } 
         if (uri) {
-            window.loadURI(uri);
+        	if(Zotero.isStandalone) {
+        		ZoteroStandalone.openInViewer(uri);
+        	} else {
+	            window.loadURI(uri);
+	        }
         } else {
             // var str = document.getElementById('zotero-maps-strings')
             //                  .getFormattedString("zoteromaps.noneSelected");
