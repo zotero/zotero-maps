@@ -12,7 +12,7 @@ Zotero.Maps = {
                 return extChannel;
             }
             catch (e){
-                Zotero.debug(e);
+                Zotero.debug("<Exception: " + e.msg + (e.stack ? '\n' + e.stack : '') + ">");
                 throw (e);
             }
         }
